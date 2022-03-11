@@ -1,0 +1,21 @@
+<div *ngIf="robotDirection$ | async as robotDirection"> 
+  <div *ngIf="robotPosition$ | async as position"> 
+    <div 
+      class="Grid"
+      *ngIf="grid$ | async as grid"
+      [ngClass]="getDirectionClass(robotDirection)"
+    >
+      <div class="Column" *ngFor="let col of grid; let x = index">
+        <div class="Cell" *ngFor="let cell of col; let y = index">
+          <div
+            class="arrow"
+            *ngIf="x === position.x && y === position.y"
+            
+          >
+            <mat-icon>arrow_forward</mat-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

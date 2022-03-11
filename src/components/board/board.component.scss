@@ -1,0 +1,41 @@
+.Grid {
+  margin: 10px 0;
+  border: 2px solid black;
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+}
+
+.Column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.Cell {
+  flex: 1;
+  width: 100%;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.down {
+  .arrow {
+    transform: rotate(90deg);
+  }
+}
+.left {
+  .arrow {
+    transform: rotate(180deg);
+  }
+}
+.up {
+  .arrow {
+    transform: rotate(270deg);
+  }
+}
